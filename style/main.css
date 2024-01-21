@@ -5,8 +5,11 @@
 body{
     height: 100vh;
     margin: 0;
-    background-image: url(images/fondo.jpg);
+    background-image: url(fondo.jpg);
     background-size: cover;
+
+
+
     /* object-fit: fill; */
 }
 
@@ -31,19 +34,19 @@ a{
     text-align: center;
     font-family: 'poppins';
     font-size: 2rem;
-    text-shadow: 10px solid #1313131e;
     color: #fff;
-    text-decoration: underline #3d3dff9a;
 }
 
 .container-activo{
     display:flex;
     justify-content: center;
     align-items: center;
-
     position: absolute;
+
     top: 0;
     left: 0;
+    /* top: calc(50% - 30px);
+    left: calc(50% - 150px); */
 
     width: 100%;
     height: 100%;
@@ -94,6 +97,7 @@ a{
     height: 90%;
 
     padding: 0 2rem 1rem;
+    border: 1px solid white;
 }
 
 .main > strong{
@@ -101,57 +105,35 @@ a{
     font-size: 2.5rem;
     text-shadow: 2px 2px #000;
     -webkit-text-stroke: 1px #5a5a5a;
-    cursor: pointer;
-}
-
-.main > strong:hover{
-    text-shadow: 4px 4px #000;
-    
 }
 
 .paragrahp{
-    max-width: 800px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #fff;
     font-family: 'lexend deca';
-
-    animation-name: salto-colors;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
 }
 
 .deseo{
+    /* position: relative;
+    top: 10%;
+    left: calc(50% - 83px); */
     color: purple;
 }
 
 .tip{
+    /* position: relative;
+    top: 30%;
+     left: 0; */
     color: yellow;
+    align-self: flex-end; 
 }
 
 .frase{
+    /* position: relative;
+    top: 70%;
+    left: -30px; */
     color: blue;
-}
-
-
-@keyframes salto-colors {
-    10%{
-        color: #fff;
-    }
-
-    40%{
-        color: rgb(240, 240, 44);
-    }
-
-    70%{
-        color: #fff;
-    }
-
-    100%{
-        color: rgb(240, 240, 44);
-    }
 }

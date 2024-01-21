@@ -20,6 +20,7 @@ let elements = document.querySelectorAll('strong');
 let menssageD = "ESto es un deseo";
 let menssageT = "ESto es un tips";
 let menssageF = "ESto es una Frase";
+let result = "";
 
 elements.forEach(currentValue =>{
     currentValue.addEventListener('click', () =>{
@@ -28,15 +29,9 @@ elements.forEach(currentValue =>{
             container = container.classList.replace("container-none","container-activo");
         } 
 
-        if(currentValue.getAttribute('class') === 'tip'){
-            menssageText.innerHTML = tips[arrayTips[randomTips]];
-            container = container.classList.replace("container-none","container-activo");
-        }
+        if(currentValue.getAttribute('class') === 'tip') alert(deseos[arrayDeseos[randomDeseo]]);
 
-        if(currentValue.getAttribute('class') === 'frase'){
-            menssageText.innerHTML = tips[arrayTips[randomTips]];
-            container = container.classList.replace("container-none","container-activo");
-        }
+        if(currentValue.getAttribute('class') === 'frase') alert(tips[arrayTips[randomTips]]);
     })
 });
 
