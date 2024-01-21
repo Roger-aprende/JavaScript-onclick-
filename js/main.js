@@ -12,28 +12,31 @@ let randomDeseo = Math.floor(arrayDeseos.length * Math.random());
 let randomTips = Math.floor(arrayTips.length * Math.random());
 
 let container = document.querySelector('#container');
-let menssageTitle = document.getElementsByClassName("windows__title");
+let menssageTitle = document.querySelector(".windows__title");
 let menssageText = document.querySelector(".windows__p");
 
 
 let elements = document.querySelectorAll('strong');
-let menssageD = "ESto es un deseo";
-let menssageT = "ESto es un tips";
-let menssageF = "ESto es una Frase";
+let menssageD = "Deseo";
+let menssageT = "Tips";
+let menssageF = "Frase";
 
 elements.forEach(currentValue =>{
     currentValue.addEventListener('click', () =>{
         if(currentValue.getAttribute('class') === 'deseo'){
+            menssageTitle.innerHTML = menssageD;
             menssageText.innerHTML = deseos[arrayDeseos[randomDeseo]];
             container = container.classList.replace("container-none","container-activo");
         } 
 
         if(currentValue.getAttribute('class') === 'tip'){
+            menssageTitle.innerHTML = menssageT;
             menssageText.innerHTML = tips[arrayTips[randomTips]];
             container = container.classList.replace("container-none","container-activo");
         }
 
         if(currentValue.getAttribute('class') === 'frase'){
+            menssageTitle.innerHTML = menssageF;
             menssageText.innerHTML = tips[arrayTips[randomTips]];
             container = container.classList.replace("container-none","container-activo");
         }
